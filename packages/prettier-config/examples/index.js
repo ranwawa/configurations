@@ -1,4 +1,4 @@
 const handsomer = {
-	name: "ranwawa",
-	"real-age": 18,
-}
+  name: 'ranwawa',
+  'real-age': 18,
+};
