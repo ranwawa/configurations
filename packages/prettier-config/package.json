@@ -5,5 +5,12 @@
   "main": ".prettierrc",
   "repository": "https://github.com/ranwawa/prettier",
   "author": "ranwawa <274544338@qq.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^7.0.2",
+    "prettier": "^2.3.2"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  }
 }
