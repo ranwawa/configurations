@@ -1,0 +1,9 @@
+{
+  "name": "@rww/prettier",
+  "version": "0.0.1",
+  "description": "the configuration of prettier and examples.",
+  "main": ".prettierrc",
+  "repository": "https://github.com/ranwawa/prettier",
+  "author": "ranwawa <274544338@qq.com>",
+  "license": "MIT"
+}
