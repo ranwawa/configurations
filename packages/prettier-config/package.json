@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "the configuration of prettier and examples.",
   "main": "index.js",
-  "repository": "https://github.com/ranwawa/prettier",
+  "repository": "https://github.com/ranwawa/ranwawa-prettier",
   "author": "ranwawa <274544338@qq.com>",
   "license": "MIT",
   "devDependencies": {
