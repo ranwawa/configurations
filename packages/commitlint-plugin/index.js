@@ -9,7 +9,7 @@ var Configuration = {
         'type-enum': [
             2,
             'always',
-            ['feat', 'fix', 'test', 'refactor', 'style', 'docs', 'build/ci'],
+            ['feat', 'fix', 'test', 'refactor', 'style', 'docs', 'build'],
         ],
         'type-case': [2, 'always', 'lower-case'],
         'type-empty': [2, 'never'],
