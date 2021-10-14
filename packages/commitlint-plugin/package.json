@@ -1,5 +1,5 @@
 {
-  "name": "commitlint-plugin-ranwawa",
+  "name": "commitlint-config-ranwawa",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
