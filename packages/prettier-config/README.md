@@ -343,19 +343,9 @@ div {
 1. 安装[prettier](https://prettier.io/docs/),并配置
 
 ```bash
-npm install --save-dev prettier
-npm install --save-dev ranwawa-prettier
+npm install --save-dev prettier ranwawa-prettier
+echo "module.exports = { ...require('ranwawa-prettier') };" > .prettierrc.js
 ```
-
-> .prettierrc.js
-
-```javascript
-module.exports = {
-  ...require('ranwawa-prettier'),
-};
-```
-
-
 
 2. 安装[lint-staged](https://github.com/okonet/lint-staged),并配置
 
