@@ -1,3 +1,1 @@
-module.exports = {
-  ...require('./index'),
-};
+module.exports = { ...require('./index') };
