@@ -1,0 +1,24 @@
+{
+  "name": "eslint-config-ranwawa",
+  "version": "1.0.0",
+  "description": "esling配置文件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranwawa/eslint-config-ranwawa.git"
+  },
+  "keywords": [
+    "eslint",
+    "configuration",
+    "eslint配置文件"
+  ],
+  "author": "ranwawa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ranwawa/eslint-config-ranwawa/issues"
+  },
+  "homepage": "https://github.com/ranwawa/eslint-config-ranwawa#readme"
+}
