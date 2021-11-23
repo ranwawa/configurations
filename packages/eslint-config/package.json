@@ -1,10 +1,12 @@
 {
-  "name": "eslint-config-ranwawa",
+  "name": "@ranwawa/eslint-config-react",
   "version": "1.0.0",
-  "description": "esling配置文件",
+  "description": "react eslint配置文件",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ts": "tsc --watch index.ts",
+    "prepare": "husky install",
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,32 @@
   "bugs": {
     "url": "https://github.com/ranwawa/eslint-config-ranwawa/issues"
   },
-  "homepage": "https://github.com/ranwawa/eslint-config-ranwawa#readme"
+  "homepage": "https://github.com/ranwawa/eslint-config-ranwawa#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "commitlint-config-ranwawa": "^1.0.1",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-config-airbnb-typescript": "^16.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "git-cz": "^4.8.0",
+    "git-cz-config-ranwawa": "^1.0.0",
+    "husky": "^7.0.4"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-config-airbnb-typescript": "^16.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  }
 }
