@@ -1,6 +1,4 @@
-import type { UserConfig } from '@commitlint/types';
-
-const Configuration: UserConfig = {
+const Configuration = {
   parserPreset: 'conventional-changelog-conventionalcommits',
   /*
    * Any rules defined here will override rules from @commitlint/config-conventional
