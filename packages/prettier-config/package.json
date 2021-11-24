@@ -1,6 +1,6 @@
 {
-  "name": "prettier-config-ranwawa",
-  "version": "0.0.1",
+  "name": "@ranwawa/prettier-config",
+  "version": "1.0.0",
   "description": "the configuration of prettier and examples.",
   "main": "index.js",
   "repository": "https://github.com/ranwawa/ranwawa-prettier",
@@ -8,7 +8,10 @@
   "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
+    "@ranwawa/commitlint-config": "^1.0.1",
+    "@ranwawa/git-cz-config": "^1.0.0",
     "commitlint-config-ranwawa": "^1.0.0",
+    "git-cz": "^4.8.0",
     "husk": "^0.5.3",
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
@@ -16,6 +19,7 @@
     "ranwawa-prettier": "^0.0.1"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "git-cz"
   }
 }

@@ -10,16 +10,16 @@
 npm install --save-dev prettier
 ```
 
-### 1.1.2 安装[prettier 配置文件](https://www.npmjs.com/package/prettier-config-ranwawa)
+### 1.1.2 安装[prettier 配置文件](https://www.npmjs.com/package/@ranwawa/prettier-config)
 
 ```bash
-npm install --save-dev prettier-config-ranwawa
+npm install --save-dev @ranwawa/prettier-config
 ```
 
 ### 1.1.3 初始化 prettier 配置文件
 
 ```bash
-echo "module.exports = {...require('ranwawa-prettier')};" > .prettierrc.js
+echo "module.exports = {...require('@ranwawa/prettier-config')};" > .prettierrc.js
 ```
 
 ### 1.1.4 验证 prettier 配置是否生效
