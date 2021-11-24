@@ -1,5 +1,5 @@
 {
-  "name": "git-cz-config-ranwawa",
+  "name": "@ranwawa/git-cz-config",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
