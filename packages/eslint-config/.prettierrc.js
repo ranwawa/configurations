@@ -1,1 +1,1 @@
-module.exports = { ...require('prettier-config-ranwawa') };
+module.exports = { ...require('@ranwawa/prettier-config') };

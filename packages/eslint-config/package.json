@@ -1,6 +1,6 @@
 {
   "name": "@ranwawa/eslint-config-react",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "react eslint配置文件",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ranwawa/eslint-config-ranwawa.git"
+    "url": "git+https://github.com/ranwawa/eslint-config.git"
   },
   "keywords": [
     "eslint",
@@ -20,14 +20,16 @@
   "author": "ranwawa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ranwawa/eslint-config-ranwawa/issues"
+    "url": "https://github.com/ranwawa/eslint-config/issues"
   },
-  "homepage": "https://github.com/ranwawa/eslint-config-ranwawa#readme",
+  "homepage": "https://github.com/ranwawa/eslint-config#readme",
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
+    "@ranwawa/commitlint-config": ">= 1.0.0",
+    "@ranwawa/git-cz-config": ">= 1.0.0",
+    "@ranwawa/prettier-config": ">= 1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
-    "commitlint-config-ranwawa": "^1.0.1",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.0",
     "eslint-config-airbnb-typescript": "^16.0.0",
@@ -37,23 +39,22 @@
     "eslint-plugin-react": "^7.27.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "git-cz": "^4.8.0",
-    "git-cz-config-ranwawa": "^1.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
-    "prettier": "2.4.1",
-    "prettier-config-ranwawa": "0.0.1"
+    "prettier": "2.4.1"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb": "^19.0.0",
-    "eslint-config-airbnb-typescript": "^16.0.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.27.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "2.4.1"
+    "@ranwawa/prettier-config": ">= 1.0.1",
+    "@typescript-eslint/eslint-plugin": ">= 5.4.0",
+    "@typescript-eslint/parser": ">= 5.4.0",
+    "eslint": ">= 8.2.0",
+    "eslint-config-airbnb": ">= 19.0.0",
+    "eslint-config-airbnb-typescript": ">= 16.0.0",
+    "eslint-plugin-import": ">= 2.25.3",
+    "eslint-plugin-jsx-a11y": ">= 6.5.1",
+    "eslint-plugin-prettier": ">= 4.0.0",
+    "eslint-plugin-react": ">= 7.27.0",
+    "eslint-plugin-react-hooks": ">= 4.3.0",
+    "prettier": ">= 2.4.1"
   }
 }
