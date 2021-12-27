@@ -30,13 +30,13 @@ npm install --save-dev @commitlint/cli
 #### 1.1.2 安装commitlint配置文件
 
 ```bash
-npm install --save-dev commitlint-config-ranwawa
+npm install --save-dev @ranwawa/commitlint-config
 ```
 
 #### 1.1.3 初始化commitlint配置文件
 
 ```bash
-echo "module.exports = { extends: ['ranwawa'] };" > commitlint.config.js
+echo "module.exports = { extends: ['@ranwawa/commitlint-config'] };" > commitlint.config.js
 ```
 
 #### 1.1.4 验证commitlint配置是否生效
@@ -111,13 +111,13 @@ npm install --save-dev git-cz
 #### 1.3.2 安装git-cz配置文件
 
 ```bash
-npm install --save-dev git-cz-config-ranwawa
+npm install --save-dev @ranwawa/git-cz-config
 ```
 
 #### 1.3.3 初始化git-cz配置文件
 
 ```bash
-echo "module.exports = require('git-cz-config-ranwawa');" > changelog.config.js
+echo "module.exports = require('@ranwawa/git-cz-config');" > changelog.config.js
 ```
 
 #### 1.2.4 在npm中添加git-cz命令

@@ -1,6 +1,6 @@
 {
   "name": "@ranwawa/commitlint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "git commit message 配置规范",
   "main": "index.js",
   "dependencies": {
@@ -9,19 +9,20 @@
   "devDependencies": {
     "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^13.2.0",
-    "@ranwawa/eslint-config-react": "^1.0.2",
+    "@ranwawa/eslint-config-react": "^1.0.4",
+    "@ranwawa/git-cz-config": ">= 1.0.0",
+    "@ranwawa/prettier-config": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
-    "eslint": "^8.3.0",
-    "eslint-config-airbnb": "^19.0.1",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.0",
     "eslint-config-airbnb-typescript": "^16.0.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react": "^7.27.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "git-cz": "^4.8.0",
-    "git-cz-config-ranwawa": "^1.0.0",
     "husky": "^7.0.2",
     "install": "^0.13.0",
     "lint-staged": "^11.2.0",
@@ -38,16 +39,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ranwawa/commitlint-plugin-ranwawa.git"
+    "url": "git+https://github.com/ranwawa/commitlint-plugin.git"
   },
   "keywords": [
     "commitlint",
-    "commitlintplugin"
+    "commitlint plugin"
   ],
   "author": "ranwawa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ranwawa/commitlint-plugin-ranwawa/issues"
+    "url": "https://github.com/ranwawa/commitlint-plugin/issues"
   },
-  "homepage": "https://github.com/ranwawa/commitlint-plugin-ranwawa#readme"
+  "homepage": "https://github.com/ranwawa/commitlint-plugin#readme"
 }
