@@ -1,1 +1,1 @@
-module.exports = require('git-cz-config-ranwawa');
+module.exports = require('@ranwawa/git-cz-config');
