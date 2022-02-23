@@ -2,11 +2,14 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "commit": "git-cz --lerna"
+    "commit": "git-cz --lerna",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@ranwawa/commitlint-config": "./packages/commitlint-plugin/",
     "@ranwawa/git-cz-config": "./packages/git-cz-config/",
     "git-cz": "^4.8.0",
+    "husky": "^7.0.4",
     "lerna": "^4.0.0"
   }
 }
