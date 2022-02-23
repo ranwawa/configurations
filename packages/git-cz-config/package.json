@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "commit": "git-cz"
   },
   "repository": {
@@ -20,8 +19,5 @@
   "bugs": {
     "url": "https://github.com/ranwawa/git-cz-config-ranwawa/issues"
   },
-  "homepage": "https://github.com/ranwawa/git-cz-config-ranwawa#readme",
-  "devDependencies": {
-    "git-cz": "^4.8.0"
-  }
+  "homepage": "https://github.com/ranwawa/git-cz-config-ranwawa#readme"
 }
