@@ -3,13 +3,17 @@
   "private": true,
   "scripts": {
     "commit": "git-cz --lerna",
+    "lint:format": "prettier --check --loglevel=error 'examples/**/*'",
     "prepare": "husky install"
   },
   "devDependencies": {
     "@ranwawa/commitlint-config": "./packages/commitlint-plugin/",
     "@ranwawa/git-cz-config": "./packages/git-cz-config/",
+    "@ranwawa/prettier-config": "./packages/prettier-config/",
     "git-cz": "^4.8.0",
     "husky": "^7.0.4",
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1"
   }
 }
