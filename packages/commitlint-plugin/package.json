@@ -6,7 +6,7 @@
   "scripts": {
     "commit": "git-cz"
   },
-  "devDependencies": {
+  "dependencies": {
     "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^13.2.0",
     "@ranwawa/git-cz-config": ">= 1.0.0",
