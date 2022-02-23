@@ -7,6 +7,7 @@
 		"ranwawa/box-shadow-allowed-list": true,
 		"ranwawa/color-allowed-list": true,
 		"ranwawa/font-size-allowed-list": true,
+		"ranwawa/spacing-allowed-list": true,
 		"ranwawa/z-index-allowed-list": true
 	}
 }

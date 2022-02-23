@@ -7,5 +7,6 @@ module.exports = [
     importLazy('./box-shadow'),
     importLazy('./color'),
     importLazy('./font-size'),
+    importLazy('./spacing'),
     importLazy('./z-index'),
 ];
