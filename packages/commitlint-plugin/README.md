@@ -3,9 +3,10 @@
 - [前言](#前言)
 - [1. 项目配置](#1-项目配置)
   - [1.1 安装依赖](#11-安装依赖)
-  - [1.2 自动验证 commit 信息](#12-自动验证-commit-信息)
+  - [1.2 自动验证 commit 信息](#12-自动验证commit信息)
   - [1.3 使用辅助工具自动填写 commit 信息](#13-使用辅助工具自动填写commit信息)
-  - [1.4 集成 gitlab-ci](#14-集成-gitlab-ci)
+  - [1.4 配合编辑器验证 commit 信息](#14-配合编辑器验证commit信息)
+  - [1.5 在服务端自动验证 commit 信息](#15-在服务端自动验证commit信息)
 - [2. commit message 规范](#2-commit-message-规范)
   - [2.1 type](#21-type)
   - [2.2 subject](#22-subject)
@@ -23,24 +24,22 @@
 
 ### 1.1 安装依赖
 
+会自动安装相关依赖
+
+- `@commitlint/cli`
+  - 验证 commit message 的工具
+- `husky`
+  - 自动验证 commit message 的工具
+- `git-cz`
+  - 快速提交标准 commit message 信息的工具
+- `@ranwawa/git-cz-config`
+  - git-cz 配置文件
+
 #### 1.1.1 安装 commitlint 配置文件
 
 ```bash
 npm install --save-dev @ranwawa/commitlint-config
 ```
-
-该命令会安装如下包及其依赖
-
-- `@commitlint/cli`
-  - 用于验证 commit message 的命令行工具
-- `@ranwawa/commitlint-config`
-  - commitlint 的配置文件
-- `husky`
-  - 自动验证 commit message 的命令行工具
-- `git-cz`
-  - 快速提交标准 commit message 信息的命令行工具
-- `@ranwawa/git-cz-config`
-  - git-cz 配置文件
 
 #### 1.1.2 初始化 commitlint 配置文件
 
@@ -95,7 +94,7 @@ npm run prepare
 npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
 ```
 
-#### 1.2.4 验证
+#### 1.2.4 验证 husky 是否配置成功
 
 ```bash
 # 提交一个错误的commit message
@@ -135,7 +134,7 @@ echo "module.exports = require('@ranwawa/git-cz-config');" > changelog.config.js
 npm set-script commit "git-cz"
 ```
 
-#### 1.3.3 验证
+#### 1.3.3 验证 git-cz 是否配置成功
 
 ```bash
 git add changelog.config.js
@@ -151,13 +150,17 @@ npm run commit
   🎡  build:      构建/持续集成相关的修改
 ```
 
-### 1.4 集成 gitlab-ci
+### 1.4 配合编辑器验证 commit 信息
+
+#### 1.4.1 配合 vscode 使用
+
+### 1.5 在服务端自动验证 commit 信息
 
 上面的检验只能在客户端完成,可能会因为各种原因失效
 
 所以把检验工作放在服务端的 git 仓库中自动完成,更加可靠
 
-#### 1.4.1 gitlab-ci 配置
+#### 1.5.1 配合 gitlib-ci 使用
 
 验证 master 分支最近一次提交之后的所有 commit message 信息
 
