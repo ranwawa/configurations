@@ -3,6 +3,11 @@
   "version": "1.2.0",
   "description": "the configuration of prettier and examples.",
   "main": "index.js",
+  "peerDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1"
+  },
   "repository": "https://github.com/ranwawa/ranwawa-prettier",
   "author": "ranwawa <274544338@qq.com>",
   "license": "MIT"
