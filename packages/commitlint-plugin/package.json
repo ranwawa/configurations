@@ -9,7 +9,8 @@
   "peerDependencies": {
     "@commitlint/cli": "^13.2.0",
     "@ranwawa/git-cz-config": "^1.0.0",
-    "git-cz": "^4.8.0"
+    "git-cz": "^4.8.0",
+    "husky": "^7.0.4"
   },
   "repository": {
     "type": "git",
