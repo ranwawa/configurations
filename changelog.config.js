@@ -1,4 +1,8 @@
 module.exports = {
   ...require('@ranwawa/git-cz-config'),
-  scopes: ['@ranwawa/eslint-config-react'],
+  scopes: [
+    'root',
+    '@ranwawa/commitlint-plugin',
+    '@ranwawa/eslint-config-react',
+  ],
 };
