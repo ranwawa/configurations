@@ -1,14 +1,16 @@
+# @ranwawa/commitlint-config
+
 - [前言](#前言)
 - [1. 项目配置](#1-项目配置)
   - [1.1 安装依赖](#11-安装依赖)
-  - [1.2 自动验证 commit 信息](#12-自动验证commit信息)
-  - [1.3 使用辅助工具 git-cz](#13-使用辅助工具git-cz)
-  - [1.4 集成 gitlab-ci](#14-集成gitlab-ci)
-- [2. commit message 规范](#2-commit-message规范)
+  - [1.2 自动验证 commit 信息](#12-自动验证-commit-信息)
+  - [1.3 使用辅助工具自动填写 commit 信息](#13-使用辅助工具自动填写commit信息)
+  - [1.4 集成 gitlab-ci](#14-集成-gitlab-ci)
+- [2. commit message 规范](#2-commit-message-规范)
   - [2.1 type](#21-type)
   - [2.2 subject](#22-subject)
   - [2.3 body](#23-body)
-- [3. commitlint 详细配置](#3-commitlint详细配置)
+- [3. commitlint 详细配置](#3-commitlint-详细配置)
 
 ## 前言
 
@@ -33,6 +35,8 @@ npm install --save-dev @ranwawa/commitlint-config
   - 用于验证 commit message 的命令行工具
 - `@ranwawa/commitlint-config`
   - commitlint 的配置文件
+- `husky`
+  - 自动验证 commit message 的命令行工具
 - `git-cz`
   - 快速提交标准 commit message 信息的命令行工具
 - `@ranwawa/git-cz-config`
@@ -94,6 +98,7 @@ npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
 #### 1.2.4 验证
 
 ```bash
+# 提交一个错误的commit message
 git add .husky/commit-msg
 git commit -m "通过husky自动运行commitlint进行验证"
 
@@ -102,7 +107,21 @@ git commit -m "通过husky自动运行commitlint进行验证"
 ✖   subject may not be empty [subject-empty]
 ```
 
-### 1.3 使用辅助工具 git-cz
+```bash
+# 提交一个正确的commit message
+git add .husky/commit-msg
+git commit -m "build: 通过husky自动运行commitlint进行验证"
+
+[master 165caaf] build: 通过husky自动运行commitlint进行验证
+ 1 file changed, 4 insertions(+)
+ create mode 100755 .husky/commit-msg
+```
+
+### 1.3 使用辅助工具自动填写 commit 信息
+
+像上面这样每次都要手动输入 build: 巴拉巴拉巴拉,还是比较麻烦
+
+通过 git-cz 可以通过选择的方式提高输入效率
 
 #### 1.3.1 初始化 git-cz 配置文件
 
@@ -133,6 +152,30 @@ npm run commit
 ```
 
 ### 1.4 集成 gitlab-ci
+
+上面的检验只能在客户端完成,可能会因为各种原因失效
+
+所以把检验工作放在服务端的 git 仓库中自动完成,更加可靠
+
+#### 1.4.1 gitlab-ci 配置
+
+验证 master 分支最近一次提交之后的所有 commit message 信息
+
+```yaml
+stages:
+  - lint
+
+variables:
+  MASTER_LATEST_COMMIT_ID: ''
+
+before_script:
+  - MASTER_LATEST_COMMIT_ID=$(git rev-parse origin/master)
+
+lint-commit-msg:
+  stage: lint
+  script:
+    - npx commitlint --from $MASTER_LATEST_COMMIT_ID
+```
 
 ## 2. commit message 规范
 
