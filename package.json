@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@ranwawa/commitlint-config": "./packages/commitlint-plugin/",
+    "@ranwawa/eslint-config-react": "./packages/eslint-config-react/",
     "@ranwawa/git-cz-config": "./packages/git-cz-config/",
     "@ranwawa/prettier-config": "./packages/prettier-config/",
     "git-cz": "^4.8.0",
