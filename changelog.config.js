@@ -4,5 +4,6 @@ module.exports = {
     'root',
     '@ranwawa/commitlint-plugin',
     '@ranwawa/eslint-config-react',
+    '@ranwawa/prettier-config',
   ],
 };
