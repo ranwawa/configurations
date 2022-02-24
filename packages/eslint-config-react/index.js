@@ -6,9 +6,13 @@ module.exports = {
   extends: [
     'eslint-config-airbnb',
     'eslint-config-airbnb-typescript',
-    'plugin:prettier/recommended',
+    'eslint-config-prettier',
   ],
-  plugins: ['prettier'],
+  plugins: [
+    'eslint-plugin-prettier',
+    'eslint-plugin-react',
+    'eslint-plugin-react-hooks',
+  ],
   rules: {
     'prettier/prettier': 'error',
   },
