@@ -4,10 +4,11 @@
   "description": "git commit message 配置规范",
   "main": "index.js",
   "dependencies": {
+    "conventional-changelog-conventionalcommits": "^4.6.1"
+  },
+  "peerDependencies": {
     "@commitlint/cli": "^13.2.0",
-    "@commitlint/config-conventional": "^13.2.0",
-    "@ranwawa/git-cz-config": ">= 1.0.0",
-    "conventional-changelog-conventionalcommits": "^4.6.1",
+    "@ranwawa/git-cz-config": "^1.0.0",
     "git-cz": "^4.8.0"
   },
   "repository": {
