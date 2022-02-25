@@ -86,3 +86,34 @@ exmaples/test-a.css
 **期望效果**
 
 在 font-size 上也同样输出错误信息,并且显示 fix 按钮
+
+### 4. npm pbulish 这个包@ranwawa/stylelint-config-scss 时总是报没有权限(20220225)
+
+#### 问题描述
+
+运行命令
+npm publish --access public
+
+总是返回下面的错误
+
+```bash
+npm ERR! code ENEEDAUTH
+npm ERR! need auth This command requires you to be logged in.
+npm ERR! need auth You need to authorize this machine using `npm adduser`
+```
+
+确认的是其他包能够正常上传
+
+也试了重新登录
+
+#### 问题解决
+
+对比几个包的 package.json,发现这个包多了这样一段配置
+
+```json
+"publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+}
+```
+
+删除掉,重新发布就好了

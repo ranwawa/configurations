@@ -11,10 +11,13 @@
     "@ranwawa/eslint-config-react": "./packages/eslint-config-react/",
     "@ranwawa/git-cz-config": "./packages/git-cz-config/",
     "@ranwawa/prettier-config": "./packages/prettier-config/",
+    "@ranwawa/stylelint-config-scss": "./packages/stylelint-config-scss",
     "git-cz": "^4.8.0",
     "husky": "^7.0.4",
     "lerna": "^4.0.0",
     "lint-staged": "^12.3.4",
-    "prettier": "^2.5.1"
+    "postcss": "^8.4.7",
+    "prettier": "^2.5.1",
+    "stylelint": "^14.5.3"
   }
 }
