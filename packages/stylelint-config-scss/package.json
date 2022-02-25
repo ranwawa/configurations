@@ -10,8 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ranwawa/stylelint-plugin-ui-convention": "*",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-sass-guidelines": "^9.0.1"
-  }
+  },
+  "peerDependencies": {
+    "postcss": "^8.4.7",
+    "postcss-html": "1.3.0",
+    "stylelint": "^14.5.3"
+  },
+  "repository": "https://github.com/ranwawa/configrations"
 }
