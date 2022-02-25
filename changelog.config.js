@@ -5,5 +5,6 @@ module.exports = {
     '@ranwawa/commitlint-plugin',
     '@ranwawa/eslint-config-react',
     '@ranwawa/prettier-config',
+    '@ranwawa/stylelint-plugin-ui-convention',
   ],
 };
