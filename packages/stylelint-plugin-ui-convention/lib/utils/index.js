@@ -59,7 +59,6 @@ var createAllowedListPluginFactory = function (_a) {
     variableReg = _a.variableReg,
     defaultOption = _a.defaultOption,
     ruleProperty = _a.ruleProperty;
-  console.log(98, ruleName);
   return stylelint.createPlugin(
     ruleName,
     function (primaryOption, secondaryOptions, context) {

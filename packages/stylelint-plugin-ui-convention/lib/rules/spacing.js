@@ -57,7 +57,9 @@ var plugin = stylelint.createPlugin(
                 '\u914D\u7F6E\u683C\u5F0F\u9519\u8BEF,'
                   .concat(key, '\u5FC5\u987B\u7B26\u5408')
                   .concat(VARIABLE_REG),
-                { stylelintType: 'invalidOption' }
+                {
+                  stylelintType: 'invalidOption',
+                }
               );
               return false;
             }
