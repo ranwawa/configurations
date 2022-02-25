@@ -52,7 +52,6 @@ export const createAllowedListPluginFactory = ({
   defaultOption,
   ruleProperty,
 }: IPluginFactory) => {
-  console.log(98, ruleName);
   return stylelint.createPlugin(
     ruleName,
     (primaryOption, secondaryOptions, context) => {

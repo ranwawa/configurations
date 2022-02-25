@@ -1,6 +1,6 @@
 {
   "name": "@ranwawa/stylelint-plugin-ui-convention",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "keywords": [
     "stylelint",
@@ -8,7 +8,10 @@
   ],
   "author": "ranwawa <ranwawa.ran@lalamove.com>",
   "license": "ISC",
-  "main": "rules/index.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "tsc:watch": "tsc --watch"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -16,7 +19,5 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "registry": "https://registry.npmmirror.com/"
-  }
+  "repository": "https://github.com/ranwawa/configrations"
 }
