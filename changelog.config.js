@@ -4,10 +4,11 @@ module.exports = {
   ...config,
   scopes: [
     'root',
-    '@ranwawa/commitlint-plugin',
-    '@ranwawa/eslint-config-react',
-    '@ranwawa/prettier-config',
-    '@ranwawa/stylelint-config-scss',
-    '@ranwawa/stylelint-plugin-ui-convention',
+    'commitlint-plugin',
+    'eslint-config-react',
+    'git-cz-config',
+    'prettier-config',
+    'stylelint-config-scss',
+    'stylelint-plugin-ui-convention',
   ],
 };
