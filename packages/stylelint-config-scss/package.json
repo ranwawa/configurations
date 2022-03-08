@@ -1,6 +1,6 @@
 {
   "name": "@ranwawa/stylelint-config-scss",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ranwawa/stylelint-plugin-ui-convention": "^1.0.1",
+    "@ranwawa/stylelint-plugin-ui-convention": "^1.0.2",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-sass-guidelines": "^9.0.1"
