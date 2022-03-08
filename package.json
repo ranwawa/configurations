@@ -1,17 +1,20 @@
 {
   "name": "root",
   "private": true,
+  "workspaces": [
+    "./packages/*"
+  ],
   "scripts": {
     "commit": "git-cz --lerna",
     "lint:format": "prettier --check --loglevel=error 'examples/**/*'",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@ranwawa/commitlint-config": "./packages/commitlint-plugin/",
-    "@ranwawa/eslint-config-react": "./packages/eslint-config-react/",
-    "@ranwawa/git-cz-config": "./packages/git-cz-config/",
-    "@ranwawa/prettier-config": "./packages/prettier-config/",
-    "@ranwawa/stylelint-config-scss": "./packages/stylelint-config-scss",
+    "@ranwawa/commitlint-config": "file:packages/commitlint-plugin",
+    "@ranwawa/eslint-config-react": "file:packages/eslint-config-react",
+    "@ranwawa/git-cz-config": "file:packages/git-cz-config",
+    "@ranwawa/prettier-config": "file:packages/prettier-config",
+    "@ranwawa/stylelint-config-scss": "file:packages/stylelint-config-scss",
     "git-cz": "^4.8.0",
     "husky": "^7.0.4",
     "lerna": "^4.0.0",
