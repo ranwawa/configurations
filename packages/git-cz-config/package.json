@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ranwawa/git-cz-config-ranwawa.git"
+    "url": "git+https://github.com/ranwawa/configurations.git"
   },
   "keywords": [
     "git-cz",
@@ -14,7 +14,7 @@
   "author": "ranwawa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ranwawa/git-cz-config-ranwawa/issues"
+    "url": "https://github.com/ranwawa/configurations/issues"
   },
-  "homepage": "https://github.com/ranwawa/git-cz-config-ranwawa#readme"
+  "homepage": "https://github.com/ranwawa/configurations#readme"
 }

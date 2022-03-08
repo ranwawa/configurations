@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ranwawa/eslint-config.git"
+    "url": "git+https://github.com/ranwawa/configurations.git"
   },
   "keywords": [
     "eslint",
@@ -18,9 +18,9 @@
   "author": "ranwawa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ranwawa/eslint-config/issues"
+    "url": "https://github.com/ranwawa/configurations/issues"
   },
-  "homepage": "https://github.com/ranwawa/eslint-config#readme",
+  "homepage": "https://github.com/ranwawa/configurations#readme",
   "dependencies": {
     "eslint-config-airbnb": "^19.0.0",
     "eslint-config-airbnb-typescript": "^16.0.0",
