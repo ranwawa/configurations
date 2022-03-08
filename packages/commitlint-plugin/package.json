@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ranwawa/commitlint-plugin.git"
+    "url": "git+https://github.com/ranwawa/configurations.git"
   },
   "keywords": [
     "commitlint",
@@ -23,7 +23,7 @@
   "author": "ranwawa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ranwawa/commitlint-plugin/issues"
+    "url": "https://github.com/ranwawa/configurations/issues"
   },
-  "homepage": "https://github.com/ranwawa/commitlint-plugin#readme"
+  "homepage": "https://github.com/ranwawa/configurations#readme"
 }
