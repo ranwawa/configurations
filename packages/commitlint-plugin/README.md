@@ -2,16 +2,9 @@
 
 - [前言](#前言)
 - [1. 项目配置](#1-项目配置)
-  - [1.1 安装依赖](#11-安装依赖)
-  - [1.2 自动验证 commit 信息](#12-自动验证commit信息)
-  - [1.3 使用辅助工具自动填写 commit 信息](#13-使用辅助工具自动填写commit信息)
-  - [1.4 配合编辑器验证 commit 信息](#14-配合编辑器验证commit信息)
-  - [1.5 在服务端自动验证 commit 信息](#15-在服务端自动验证commit信息)
 - [2. commit message 规范](#2-commit-message-规范)
-  - [2.1 type](#21-type)
-  - [2.2 subject](#22-subject)
-  - [2.3 body](#23-body)
-- [3. commitlint 详细配置](#3-commitlint-详细配置)
+- [3. commit message 原则](#3-commit-message-原则)
+- [4. commitlint 详细配置](#4-commitlint-详细配置)
 
 ## 前言
 
@@ -286,7 +279,29 @@ fix: 修复首页banner无法滑动的bug
 由于`swipe.js`插件版本问题,导致打包之后的压缩文件......
 ```
 
-## 3. commitlint 详细配置
+## 3. commit message 原则
+
+一条 commit message 应尽量简短且具有可描述性,能达到让不了解该项目的人看懂改动原因.
+
+```bash
+# BAD -> 没有提供上下文
+跳转首页
+
+# GOOD
+在登录页面底部添加盅首页链接
+
+```
+
+```bash
+# BAD -> 过多的技术细节描述,可放在body里面而非subject
+因为在IOS6.0下不兼容,所以删除了background-color,而使用background
+
+# GOOD -> 做了什么达到什么目的
+变更css属性以兼容IOS5.0
+
+```
+
+## 4. commitlint 详细配置
 
 |                      | type                                                                 | scope                       | subject           | header             | body              | Footer          |
 | -------------------- | -------------------------------------------------------------------- | --------------------------- | ----------------- | ------------------ | ----------------- | --------------- |

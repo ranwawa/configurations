@@ -1,0 +1,19 @@
+{
+  "name": "@ranwawa/editor-config",
+  "version": "1.0.0",
+  "description": "editoryconfig配置文件",
+  "main": ".editorconfig",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranwawa/configurations.git"
+  },
+  "author": "ranwawa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ranwawa/configurations/issues"
+  },
+  "homepage": "https://github.com/ranwawa/configurations#readme"
+}
