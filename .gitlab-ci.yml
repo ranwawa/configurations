@@ -16,7 +16,7 @@ lint:branch:
   stage: 'lint'
   script:
     - echo lint:branch
-    - npx --no-install @ranwawa/branchlint
+    - npx @ranwawa/branchlint
 
 lint:message:
   stage: 'lint'
