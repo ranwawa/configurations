@@ -37,28 +37,28 @@ function getScriptFiles() {
 	echo ${list[*]}
 }
 
-# lint:branch todo
+# lint:branch
+echo '------lint:branch...------'
 npx --no-install @ranwawa/branchlint
 
-# lint:file-structrue todo
+# lint:file-structrue TODO
 
 # lint:message
-echo '------检测commit message信息...------'
+echo '------lint:message...------'
 npx --no-install commitlint --from $COMMON_ANCESTOR
 
 # lint:script
-echo '------检测脚本代码------'
+echo '------lint:script...------'
 npx --no-install eslint $(getScriptFiles)
 
 # lint:style
-echo '------检测样式代码------'
+echo '------lint:style...------'
 # TODO 可以使用忽略除指定后缀以外的文件的格式
 if [ -n ${getFiles}'' ]; then
-  echo 非空
   npx --no-install stylelint --allow-empty-input ${getFiles}
 fi
 
 
 # lint:prettier
-echo '------检测代码风格------'
+echo '------lint:prettier...------'
 npx --no-install prettier --check --ignore-unknown $FILES
