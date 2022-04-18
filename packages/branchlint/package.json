@@ -1,0 +1,29 @@
+{
+  "name": "@ranwawa/branchlint",
+  "version": "1.0.0",
+  "description": "lint tool for your branch name",
+  "main": "index.js",
+  "bin": "./index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranwawa/configurations.git"
+  },
+  "keywords": [
+    "git",
+    "branchlint"
+  ],
+  "author": "ranwawa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ranwawa/configurations/issues"
+  },
+  "homepage": "https://github.com/ranwawa/configurations#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "zx": "^6.1.0"
+  }
+}

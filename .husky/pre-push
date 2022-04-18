@@ -39,6 +39,8 @@ function getScriptFiles() {
 }
 
 # lint:branch todo
+npx @ranwawa/branchlint
+
 # lint:file-structrue todo
 
 # lint:message
@@ -51,6 +53,7 @@ npx --no-install eslint $(getScriptFiles)
 
 # lint:style
 echo '------检测样式代码------'
+# TODO 可以使用忽略除指定后缀以外的文件的格式
 npx --no-install stylelint --allow-empty-input $(getFiles)
 
 
