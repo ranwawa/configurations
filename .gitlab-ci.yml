@@ -16,7 +16,7 @@ install:
   script:
     - echo $COMMON_ANCESTOR
     - npm i
-    - npx --no-install commitlint --from $COMMON_ANCESTOR
+    - npx --no-install @ranwawa/branchlint
 
 lint:branch:
   stage: 'lint'
