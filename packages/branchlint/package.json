@@ -1,6 +1,6 @@
 {
   "name": "@ranwawa/branchlint",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "lint tool for your branch name",
   "main": "index.mjs",
   "bin": {
