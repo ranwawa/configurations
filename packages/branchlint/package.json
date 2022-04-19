@@ -1,9 +1,11 @@
 {
   "name": "@ranwawa/branchlint",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "lint tool for your branch name",
   "main": "index.mjs",
-  "bin": "./index.mjs",
+  "bin": {
+    "branchlint": "./bin/index.mjs"
+  },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
