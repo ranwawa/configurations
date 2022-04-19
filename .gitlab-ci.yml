@@ -18,7 +18,7 @@ install:
     - node -v
     - npm -v
     - npm i
-    - npx --no-install @ranwawa/branchlint
+    - npx @ranwawa/branchlint
 
 lint:branch:
   stage: 'lint'
