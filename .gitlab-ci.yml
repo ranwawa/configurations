@@ -10,16 +10,16 @@ stages:
 
 install:
   stage: 'prepare'
-  script: npm ci
+  script:
+    - npm i
+    - npx --no-install @ranwawa/branchlint
 
 lint:branch:
   stage: 'lint'
   script:
-    - echo lint:branch
     - npx @ranwawa/branchlint
 
 lint:message:
   stage: 'lint'
   script:
-    - echo lint:branch
     - npx --no-install @ranwawa/branchlint
