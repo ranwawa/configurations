@@ -5,6 +5,7 @@
     "./packages/*"
   ],
   "scripts": {
+    "test": "branchlint",
     "commit": "git-cz --lerna",
     "lint:format": "prettier --check --loglevel=error 'examples/**/*'",
     "prepare": "husky install"

@@ -4,6 +4,9 @@ cache:
   paths:
     - node_modules
 
+variables:
+  COMMON_ANCESTOR: $(git merge-base origin/master HEAD)
+
 stages:
   - 'prepare'
   - 'lint'
@@ -11,8 +14,9 @@ stages:
 install:
   stage: 'prepare'
   script:
+    - echo $COMMON_ANCESTOR
     - npm i
-    - npx @ranwawa/branchlint
+    - npx --no-install commitlint --from $COMMON_ANCESTOR
 
 lint:branch:
   stage: 'lint'
