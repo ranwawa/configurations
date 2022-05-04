@@ -14,5 +14,14 @@ module.exports = {
   ],
   rules: {
     'prettier/prettier': 'error',
+    'import/extensions': ['error', 'always'],
   },
+  overrides: [
+    {
+      files: ['test/**', '*.test.js', '*.test.ts'],
+      plugins: ['eslint-plugin-jest'],
+      extends: ['plugin:eslint-plugin-jest/recommended'],
+      rules: { 'jest/prefer-expect-assertions': 'off' },
+    },
+  ],
 };
