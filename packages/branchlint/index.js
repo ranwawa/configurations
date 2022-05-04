@@ -34,7 +34,7 @@ async function init() {
             )}
     `);
 
-    nothrow($`exit 1`);
+    process.exit(1);
   } else {
     await $`exit 0`;
   }
