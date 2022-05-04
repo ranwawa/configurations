@@ -10,11 +10,6 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@ranwawa/commitlint-config": "file:packages/commitlint-plugin",
-    "@ranwawa/eslint-config-react": "file:packages/eslint-config-react",
-    "@ranwawa/git-cz-config": "file:packages/git-cz-config",
-    "@ranwawa/prettier-config": "file:packages/prettier-config",
-    "@ranwawa/stylelint-config-scss": "file:packages/stylelint-config-scss",
     "git-cz": "^4.8.0",
     "husky": "^7.0.4",
     "lerna": "^4.0.0",
