@@ -39,6 +39,7 @@ function getScriptFiles() {
 }
 
 # lint:branch todo
+echo '------检测分支命名...------'
 npx @ranwawa/branchlint
 
 # lint:file-structrue todo
