@@ -1,4 +1,4 @@
 {
-  "include": [".eslintrc.js", "packages/**/*"],
+  "include": ["./*.js", "packages/**/*"],
   "exclude": ["node_modules"]
 }
