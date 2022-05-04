@@ -1,6 +1,6 @@
 {
   "name": "@ranwawa/prettier-config",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "the configuration of prettier and examples.",
   "main": "index.js",
   "peerDependencies": {
