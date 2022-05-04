@@ -19,5 +19,6 @@
   "files": [
     "lib"
   ],
-  "repository": "https://github.com/ranwawa/configurations"
+  "repository": "https://github.com/ranwawa/configurations",
+  "gitHead": "50660ca64c8129e031f1fed3fc5ed7e980e96bd7"
 }

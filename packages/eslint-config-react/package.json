@@ -33,5 +33,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4"
-  }
+  },
+  "gitHead": "f355f3512a6dda22937984758c7eec1478b8b7fc"
 }
