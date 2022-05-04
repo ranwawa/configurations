@@ -6,7 +6,8 @@
   "bin": "./index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest ./index.test.js --watch",
+    "node": "node --experimental-specifier-resolution=node ./index.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,8 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "zx": "^6.1.0"
+  },
+  "devDependencies": {
+    "jest": "^28.0.3"
   }
 }
