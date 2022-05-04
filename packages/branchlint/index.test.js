@@ -1,5 +1,5 @@
-import { Config } from './config';
-import { Linter } from './linter';
+import { Config } from './config.js';
+import { Linter } from './linter.js';
 
 describe('Linter', () => {
   const config = new Config();

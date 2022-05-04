@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { $, chalk, quiet, nothrow } from 'zx';
+import { $, chalk, quiet } from 'zx';
 import { Config } from './config.js';
 import { Linter } from './linter.js';
 
