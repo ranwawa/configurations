@@ -5,7 +5,6 @@ COMMON_ANCESTOR=$(git merge-base origin/master HEAD)
 FILES=$(git diff --name-only --diff-filter=d 7d0c8a2b0c26942dec8464024913faec4b9a6942..HEAD)
 
 echo '当前分支与origin/master的共同祖先节点:'$COMMON_ANCESTOR
-echo $FILES
 
 # TODO 怎么把参数传进来
 function getFiles() {
@@ -49,13 +48,14 @@ echo '------检测commit message信息...------'
 npx --no-install commitlint --from $COMMON_ANCESTOR
 
 # lint:script
-echo '------检测脚本代码------'
+echo '------检测脚本代码...------'
 npx --no-install eslint $(getScriptFiles)
 
 # lint:style
-echo '------检测样式代码------'
-# TODO 可以使用忽略除指定后缀以外的文件的格式
+echo '------检测样式代码...------'
+if [ -n $(getFiles)'' ]; then
 npx --no-install stylelint --allow-empty-input $(getFiles)
+fi;
 
 
 # lint:prettier
