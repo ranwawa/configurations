@@ -28,7 +28,9 @@ export class Config {
       message: '内容只能是英文加中划线',
     },
   ];
+
   originalConfig = null;
+
   processedConfig = [];
 
   processConfig() {
