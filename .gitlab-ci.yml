@@ -15,8 +15,8 @@ stages:
 lint:branch:
   stage: 'lint'
   script:
-    - echo $CI_COMMIT_BRANCH CI_COMMIT_REF_NAME
-    - npm install @ranwawa/branchlint
+    - echo $CI_COMMIT_BRANCH $CI_COMMIT_REF_NAME
+    - npm install
     - npx @ranwawa/branchlint
 #lint:message:
 #  stage: 'lint'
