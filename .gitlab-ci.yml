@@ -1,0 +1,25 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules
+
+stages:
+  - 'prepare'
+  - 'lint'
+
+install:
+  stage: 'prepare'
+  script: npm ci
+
+lint:branch:
+  stage: 'lint'
+  script:
+    - echo lint:branch
+    - npx @ranwawa/branchlint
+
+lint:message:
+  stage: 'lint'
+  script:
+    - echo lint:branch
+    - npx --no-install @ranwawa/branchlint
