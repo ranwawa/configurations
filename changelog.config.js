@@ -6,6 +6,7 @@ module.exports = {
   scopes: [
     'root',
     'branchlint',
+    'treelint',
     'commitlint-plugin',
     'eslint-config-react',
     'git-cz-config',
