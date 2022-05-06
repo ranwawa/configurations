@@ -21,10 +21,12 @@ explorer
     const lintRes = lint(dirname, config, dirname);
 
     if (lintRes) {
-      const { relative, expectedStr, receivedStr } = res;
+      const { currentDirectory, expectedStr, receivedStr } = lintRes;
 
       console.log(
-        `\n${relative}目录下文件命名异常\n\n${expectedStr}\n${receivedStr}\n`
+        `\n${currentDirectory}目录下文件命名异常\n\n${chalk.green(
+          expectedStr
+        )}\n${chalk.red(receivedStr)}\n`
       );
       process.exit(1);
     }
