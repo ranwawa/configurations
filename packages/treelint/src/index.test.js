@@ -1,4 +1,4 @@
-import { getExpectedAndCommonPattern, lint } from './linter.js';
+import { getExpectedAndCommonPattern } from './linter.js';
 
 const mockConfig = {
   src: {
