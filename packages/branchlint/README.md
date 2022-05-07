@@ -60,8 +60,33 @@ git push
 
 ### 1.3 服务端自动验证分支命名
 
+#### 1.3.1 配合 gitlab-ci 使用
+
+在项目根目录创建`gitlab-ci.yml`文件
+
+```yaml
+image: node:latest
+
+cache:
+  paths:
+    - node_modules
+
+stages:
+  - 'prepare'
+  - 'lint'
+
+install:
+  stage: 'prepare'
+  script: npm ci
+
+lint:branch:
+  stage: 'lint'
+  script:
+    - npx --no-install @ranwawa/branchlint
+```
+
 ## 2. 配置文件
 
 ## 3. 默认配置
 
-![](https://raw.githubusercontent.com/ranwawa/document/master/img/20220505-114809.jpeg)
+![ranwawa branch naming convention](https://raw.githubusercontent.com/ranwawa/document/master/img/20220505-114809.jpeg)

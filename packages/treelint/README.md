@@ -57,6 +57,31 @@ git push
 
 ### 1.3 服务端自动验证文件结构
 
+#### 1.3.1 配合 gitlab-ci 使用
+
+在项目根目录创建`gitlab-ci.yml`文件
+
+```yaml
+image: node:latest
+
+cache:
+  paths:
+    - node_modules
+
+stages:
+  - 'prepare'
+  - 'lint'
+
+install:
+  stage: 'prepare'
+  script: npm ci
+
+lint:tree:
+  stage: 'lint'
+  script:
+    - npx --no-install @ranwawa/treelint
+```
+
 ## 2. 配置文件
 
 treelint 会自动搜索配置文件
