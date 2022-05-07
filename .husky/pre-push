@@ -37,11 +37,13 @@ function getScriptFiles() {
 	echo ${list[*]}
 }
 
-# lint:branch todo
+# lint:branch
 echo '------检测分支命名...------'
-npx @ranwawa/branchlint
+npx --no-install @ranwawa/branchlint
 
-# lint:file-structrue TODO
+# lint:tree
+echo '------检测文件结构...------'
+npx --no-install @ranwawa/treelint
 
 # lint:message
 echo '------lint:message...------'
