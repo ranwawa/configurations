@@ -5,6 +5,7 @@ import _ from 'lodash';
 const ENUM = {
   FILE: 'FILE',
   DIRECTORY: 'DIRECTORY',
+  // TODO 由于对象属性值无法使用\,所以对正则功能有影响,最好换成gitignore中那种模式
   REGEXP: 'REGEXP',
   FUNCTION: 'FUNCTION',
 };
