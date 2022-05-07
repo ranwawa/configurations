@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'import/extensions': ['error', 'always'],
+    'no-warning-comments': ['warn', { terms: ['TODO'], location: 'start' }],
   },
   overrides: [
     {
