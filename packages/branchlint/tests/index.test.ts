@@ -1,9 +1,29 @@
-import { Config } from './config.js';
-import { Linter } from './linter.js';
+import { jest } from '@jest/globals';
+import cosmiconfig from 'cosmiconfig';
+import { Config, DEFAULT_CONFIG } from '../src/config';
+import { Linter } from '../src/linter';
+
+describe('Config', () => {
+  const spy = jest.spyOn(cosmiconfig, 'cosmiconfigSync');
+
+  it('如果传了配置对象,则不去搜索默认配置', () => {
+    const conf = new Config();
+    conf.initConfig(DEFAULT_CONFIG);
+
+    expect(spy).toBeCalledTimes(0);
+  });
+
+  it('如果没传配置对象,则要搜索默认配置', () => {
+    const conf = new Config();
+    conf.initConfig();
+
+    expect(spy).toBeCalledTimes(1);
+  });
+});
 
 describe('Linter', () => {
   const config = new Config();
-  config.processConfig();
+  config.initConfig(DEFAULT_CONFIG);
 
   it('第1部分[分支特性]不是feat或fix则会抛出索引0', () => {
     expect(Linter.lint('master', config.processedConfig).index).toBe(0);
