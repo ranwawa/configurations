@@ -66,6 +66,7 @@ export class Config {
 
       this.originalConfig = res ? res.config : DEFAULT_CONFIG;
     }
+
     this.processConfig();
   }
 
@@ -78,6 +79,7 @@ export class Config {
       regStr = `(${pattern})`;
     } else if (_.isRegExp(pattern)) {
       const str = pattern.toString();
+
       regStr = `(${str.substring(1, str.length - 1)})`;
     }
 

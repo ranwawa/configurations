@@ -7,10 +7,12 @@ async function getBranchName() {
   let branchName = '';
 
   const gitlabCIBranchName = await nothrow(quiet($`echo -n $CI_COMMIT_BRANCH`));
+
   if (gitlabCIBranchName.exitCode === 0) {
     branchName = gitlabCIBranchName.stdout;
   } else {
     const gitBranchName = await quiet($`git rev-parse --abbrev-ref HEAD`);
+
     branchName = gitBranchName.stdout;
   }
 
@@ -25,6 +27,7 @@ async function init() {
   // 5. 根据类型进行处理
 
   const conf = new Config();
+
   conf.initConfig();
 
   const branchName = await getBranchName();
@@ -52,6 +55,7 @@ async function init() {
     console.log(chalk.green('分支名符合规范'));
   }
 }
+
 init();
 
 export default {};

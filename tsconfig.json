@@ -1,4 +1,5 @@
 {
+  "files": ["./tsconfig.json"],
   "exclude": ["node_modules/", "packages/**/node_modules"],
-  "include": ["./*.js", "packages/**/*.js"]
+  "include": ["./*.js", "packages/**/*.js", "packages/**/*.ts"]
 }
