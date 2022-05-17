@@ -32,6 +32,7 @@ export class Linter {
         }
 
         const alonePattern = unPassedBranchComponent.match(reg);
+
         if (!alonePattern) {
           return failedResult;
         }
