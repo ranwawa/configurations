@@ -1,0 +1,30 @@
+{
+  "name": "@ranwawa/treelint",
+  "version": "0.1.1",
+  "description": "",
+  "keywords": [],
+  "type": "module",
+  "main": "./index.js",
+  "bin": "./index.js",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest ./index.test.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranwawa/configurations.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ranwawa/configurations/issues"
+  },
+  "homepage": "https://github.com/ranwawa/configurations#readme",
+  "author": "ranwawa <274544338@qq.com> (https://github.com/ranwawa)",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "cosmiconfig": "^7.0.1",
+    "lodash": "^4.17.21"
+  },
+  "peerDependencies": {
+    "husky": "^7.0.4"
+  }
+}

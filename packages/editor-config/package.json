@@ -1,6 +1,6 @@
 {
   "name": "@ranwawa/editor-config",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "editoryconfig配置文件",
   "main": ".editorconfig",
   "scripts": {
@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/ranwawa/configurations/issues"
   },
-  "homepage": "https://github.com/ranwawa/configurations#readme"
+  "homepage": "https://github.com/ranwawa/configurations#readme",
+  "gitHead": "f355f3512a6dda22937984758c7eec1478b8b7fc"
 }

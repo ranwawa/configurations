@@ -3,6 +3,20 @@ import { $, chalk, quiet, nothrow } from 'zx';
 import { Config } from './config.js';
 import { Linter } from './linter.js';
 
+async function getBranchName() {
+  let branchName = '';
+
+  const gitlabCIBranchName = await nothrow(quiet($`echo $CI_COMMIT_BRANCH`));
+  if (gitlabCIBranchName.exitCode === 0) {
+    branchName = gitlabCIBranchName.stdout;
+  } else {
+    const gitBranchName = await quiet($`git rev-parse --abbrev-ref HEAD`);
+    branchName = gitBranchName.stdout;
+  }
+
+  return branchName.replace(/\n/, '');
+}
+
 async function init() {
   // 1. 获取分支名
   // 2. 读取配置文件
@@ -13,11 +27,9 @@ async function init() {
   const conf = new Config();
   conf.processConfig();
 
-  const branchName = await quiet($`git rev-parse --abbrev-ref HEAD`);
-  const res = Linter.lint(
-    branchName.stdout.replace('\n', ''),
-    conf.processedConfig
-  );
+  const branchName = await getBranchName();
+
+  const res = Linter.lint(branchName, conf.processedConfig);
 
   if (res) {
     const { config, index, passedBranchComponent, unPassedBranchComponent } =

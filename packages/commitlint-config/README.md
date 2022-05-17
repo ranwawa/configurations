@@ -121,7 +121,7 @@ git commit -m "build: 通过husky自动运行commitlint进行验证"
 echo "module.exports = require('@ranwawa/git-cz-config');" > changelog.config.js
 ```
 
-#### 1.2.2 在 npm 中添加 git-cz 命令
+#### 1.3.2 在 npm 中添加 git-cz 命令
 
 ```bash
 npm set-script commit "git-cz"

@@ -1,6 +1,6 @@
 {
   "name": "@ranwawa/commitlint-config",
-  "version": "1.3.3",
+  "version": "1.4.1",
   "description": "git commit message 配置规范",
   "main": "index.js",
   "dependencies": {
@@ -25,5 +25,6 @@
   "bugs": {
     "url": "https://github.com/ranwawa/configurations/issues"
   },
-  "homepage": "https://github.com/ranwawa/configurations#readme"
+  "homepage": "https://github.com/ranwawa/configurations#readme",
+  "gitHead": "50660ca64c8129e031f1fed3fc5ed7e980e96bd7"
 }

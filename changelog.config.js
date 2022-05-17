@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const config = require('@ranwawa/git-cz-config');
 
 module.exports = {
@@ -5,6 +6,7 @@ module.exports = {
   scopes: [
     'root',
     'branchlint',
+    'treelint',
     'commitlint-plugin',
     'eslint-config-react',
     'git-cz-config',
