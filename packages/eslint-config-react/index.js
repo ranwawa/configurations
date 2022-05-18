@@ -19,7 +19,7 @@ module.exports = {
     complexity: ['warn', { max: 10 }],
     'max-lines-per-function': [
       'warn',
-      { max: 50, skipBlankLines: true, skipComments: true },
+      { max: 100, skipBlankLines: true, skipComments: true },
     ],
     'max-lines': [
       'warn',
