@@ -27,7 +27,7 @@ describe('getExpectedAndCommonPattern', () => {
   it('如果显示的文件声明和通配模式都有,则需要返回对应值', () => {
     expect(getExpectedAndCommonPattern(mockConfig.src)).toEqual({
       expected: ['app.vue', 'assets'],
-      commonPattern: /^(index)|(main).js$/,
+      commonPattern: /^(index|main).js$/,
     });
   });
 });
