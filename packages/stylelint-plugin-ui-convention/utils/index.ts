@@ -1,11 +1,11 @@
 import path = require('path');
 import stylelint = require('stylelint');
-import type { TOption, IPluginFactory } from '../types';
 import type { Root } from 'postcss';
+import type { TOption, IPluginFactory } from '../types';
 
 const { report, validateOptions } = stylelint.utils;
 
-export const processOption = (
+const processOption = (
   primaryOption: TOption | true,
   postcssRoot: Root
 ): TOption => {
@@ -29,6 +29,7 @@ export const processOption = (
   }
 
   const processedOption = {};
+
   Object.entries(primaryOption).forEach(([key, value]) => {
     processedOption[processKey(key)] = value;
   });
@@ -36,7 +37,7 @@ export const processOption = (
   return processedOption;
 };
 
-export const revertOption = (primaryOption: TOption): TOption => {
+const revertOption = (primaryOption: TOption): TOption => {
   const option = {};
 
   Object.entries(primaryOption).forEach(([key, value]) => {
@@ -46,50 +47,60 @@ export const revertOption = (primaryOption: TOption): TOption => {
   return option;
 };
 
-export const createAllowedListPluginFactory = ({
+const isObject = (primaryOption: any): boolean =>
+  typeof primaryOption === 'object' &&
+  primaryOption !== null &&
+  !Array.isArray(primaryOption);
+
+const possibleOptions =
+  (primaryOption, variableReg, postcssResult, defaultOption) => (value) => {
+    if (value === true) {
+      return true;
+    }
+
+    if (!isObject(primaryOption)) {
+      postcssResult.warn(
+        `配置格式错误,配置只能是对象如:${JSON.stringify(defaultOption)}`,
+        { stylelintType: 'invalidOption' }
+      );
+
+      return false;
+    }
+
+    const item = Object.keys(primaryOption).find(
+      (key) => !variableReg.test(key)
+    );
+
+    if (item) {
+      postcssResult.warn(`配置格式错误,${item}必须符合${variableReg}`, {
+        stylelintType: 'invalidOption',
+      });
+
+      return false;
+    }
+
+    return true;
+  };
+
+const createAllowedListPluginFactory = ({
   ruleName,
   variableReg,
   defaultOption,
   ruleProperty,
-}: IPluginFactory) => {
-  return stylelint.createPlugin(
+}: IPluginFactory) =>
+  stylelint.createPlugin(
     ruleName,
-    (primaryOption, secondaryOptions, context) => {
-      return (postcssRoot, postcssResult) => {
+    (primaryOption, _secondaryOptions, context) =>
+      (postcssRoot, postcssResult) => {
         // 验证配置
         const validOptions = validateOptions(postcssResult, ruleName, {
           actual: primaryOption,
-          possible: (value) => {
-            if (value === true) {
-              return true;
-            }
-
-            if (
-              typeof primaryOption === 'object' &&
-              primaryOption !== null &&
-              !Array.isArray(primaryOption)
-            ) {
-              const key = Object.keys(primaryOption).find(
-                (key) => !variableReg.test(key)
-              );
-
-              if (key) {
-                postcssResult.warn(
-                  `配置格式错误,${key}必须符合${variableReg}`,
-                  { stylelintType: 'invalidOption' }
-                );
-                return false;
-              }
-
-              return true;
-            }
-
-            postcssResult.warn(
-              `配置格式错误,配置只能是对象如:${JSON.stringify(defaultOption)}`,
-              { stylelintType: 'invalidOption' }
-            );
-            return false;
-          },
+          possible: possibleOptions(
+            primaryOption,
+            variableReg,
+            postcssResult,
+            defaultOption
+          ),
           optional: true,
         });
 
@@ -107,12 +118,12 @@ export const createAllowedListPluginFactory = ({
 
         console.log('当前插件:', ruleName);
         postcssRoot.walkDecls((decl) => {
+          const { value, prop } = decl;
+
           // 不是font-size节点 -> 不用检查 -> 返回
-          if (decl.prop !== ruleProperty) {
+          if (prop !== ruleProperty) {
             return;
           }
-
-          const { value } = decl;
 
           // 是预设变量 -> 正确 -> 返回
           if (option[value]) {
@@ -121,19 +132,23 @@ export const createAllowedListPluginFactory = ({
 
           // 不是预设值 -> 没有对应的预设变量 -> 报错
           const presetVariable = revertedOption[value];
+
           if (!presetVariable) {
             report({
               ruleName,
               result: postcssResult,
-              message: `${value}不是预设的${ruleProperty}值`,
+              message: `${value}不是预设的${prop}值`,
               node: decl,
             });
+
             return;
           }
 
           // 是预设的值 -> 有预设的变量 -> 开启了修复 -> 直接修复
           if (context.fix) {
+            // eslint-disable-next-line no-param-reassign
             decl.value = decl.value.replace(value, presetVariable);
+
             return;
           }
 
@@ -145,7 +160,11 @@ export const createAllowedListPluginFactory = ({
             node: decl,
           });
         });
-      };
-    }
+      }
   );
+
+module.exports = {
+  processOption,
+  revertOption,
+  createAllowedListPluginFactory,
 };
