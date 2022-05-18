@@ -1,7 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-TARGET_BRANCH=origin/master
+TARGET_BRANCH=github/master
 COMMON_ANCESTOR=$(git merge-base $TARGET_BRANCH HEAD)
 HEAD_SHA=$(git rev-parse --short HEAD)
 FILES=$(git diff --name-only --diff-filter=d $COMMON_ANCESTOR..$HEAD_SHA)
