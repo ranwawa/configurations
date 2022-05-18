@@ -2,12 +2,13 @@
   "name": "@ranwawa/branchlint",
   "version": "1.1.1",
   "description": "lint tool for your branch name",
-  "main": "index.js",
-  "bin": "./index.js",
+  "main": "./src/index.ts",
+  "bin": "./bin/index.js",
   "type": "module",
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest ./index.test.js --watch",
-    "node": "node --experimental-specifier-resolution=node ./index.js"
+    "compile": "tsc -watch",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest ./tests/index.test.js --watch",
+    "node": "node --experimental-specifier-resolution=node ./bin/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,11 +25,17 @@
   },
   "homepage": "https://github.com/ranwawa/configurations#readme",
   "dependencies": {
+    "cosmiconfig": "^7.0.1",
     "lodash": "^4.17.21",
     "zx": "^6.1.0"
   },
   "devDependencies": {
-    "jest": "^28.0.3"
+    "@jest/globals": "^28.1.0",
+    "@types/jest": "^27.5.1",
+    "@types/lodash": "^4.14.182",
+    "babel-jest": "^28.1.0",
+    "jest": "^28.0.3",
+    "ts-jest": "^28.0.2"
   },
   "gitHead": "50660ca64c8129e031f1fed3fc5ed7e980e96bd7"
 }

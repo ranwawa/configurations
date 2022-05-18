@@ -5,23 +5,43 @@ cache:
     - node_modules
 
 stages:
-  - 'prepare'
-  - 'lint'
+  #- 'prepare'
+  #- 'lint'
+  - 'test'
 
-install:
-  stage: 'prepare'
-  script: npm ci
+# install:
+#   stage: 'prepare'
+#   script: npm ci
 
-lint:branch:
-  stage: 'lint'
-  script:
-    - npx --no-install @ranwawa/branchlint
+# lint:branch:
+#   stage: 'lint'
+#   script:
+#     - npx --no-install @ranwawa/branchlint
 
-lint:tree:
-  stage: 'lint'
-  script:
-    - npx --no-install @ranwawa/treelint
+# lint:tree:
+#   stage: 'lint'
+#   script:
+#     - npx --no-install @ranwawa/treelint
 # lint:message:
 #   stage: 'lint'
 #   script:
 #     - npx --no-install @ranwawa/branchlint
+
+variables:
+  SONAR_USER_HOME: '${CI_PROJECT_DIR}/.sonar' # Defines the location of the analysis task cache
+  GIT_DEPTH: '0' # Tells git to fetch all the branches of the project, required by the analysis task
+
+sonarcloud-check:
+  image:
+    name: sonarsource/sonar-scanner-cli:latest
+    entrypoint: ['']
+  cache:
+    key: '${CI_JOB_NAME}'
+    paths:
+      - .sonar/cache
+  script:
+    - sonar-scanner
+  only:
+    - merge_requests
+    - main
+    - develop

@@ -1,5 +1,8 @@
+import type { IProcessedConfig } from './config.js';
+
 export class Linter {
-  static lint(branchName, config) {
+  static lint(branchName: string, processedConfig: IProcessedConfig) {
+    const { config } = processedConfig;
     let unPassedBranchComponent = branchName;
     let passedBranchComponent = '';
     const { length } = config;
@@ -27,6 +30,7 @@ export class Linter {
         if (isLastItem) {
           return failedResult;
         }
+
         const alonePattern = unPassedBranchComponent.match(reg);
 
         if (!alonePattern) {
