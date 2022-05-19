@@ -5,12 +5,14 @@ module.exports = {
   extends: [
     'eslint-config-airbnb',
     'eslint-config-airbnb-typescript',
+    'plugin:sonarjs/recommended',
     'eslint-config-prettier',
   ],
   plugins: [
     'eslint-plugin-prettier',
     'eslint-plugin-react',
     'eslint-plugin-react-hooks',
+    'eslint-plugin-sonarjs',
   ],
   rules: {
     'prettier/prettier': 'error',
