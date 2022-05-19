@@ -21,7 +21,7 @@
   "author": "ranwawa <274544338@qq.com> (https://github.com/ranwawa)",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^4.1.2",
+    "chalk4": "npm:chalk@^4.1.2",
     "cosmiconfig": "^7.0.1",
     "lodash": "^4.17.21"
   },

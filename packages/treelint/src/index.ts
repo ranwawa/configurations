@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const chalk = require('chalk');
+const chalk = require('chalk4');
 const { cosmiconfigSync } = require('cosmiconfig');
 const path = require('path');
 const { lint } = require('./linter.js');
