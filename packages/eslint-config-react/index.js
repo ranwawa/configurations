@@ -41,6 +41,7 @@ module.exports = {
         next: ['const', 'let', 'var'],
       },
     ],
+    'sonarjs/cognitive-complexity': ['off'], // 关掉,用eslint默认的
   },
   overrides: [
     {
