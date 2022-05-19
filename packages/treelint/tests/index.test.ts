@@ -1,10 +1,10 @@
-import { getExpectedAndCommonPattern } from './linter.js';
+const { getExpectedAndCommonPattern } = require('../src/linter.ts');
 
 const mockConfig = {
   src: {
     'app.vue': 'file',
     assets: 'directory',
-    '^(index)|(main).js$': 'regexp',
+    '^(index|main).js$': 'regexp',
   },
   'package.json': 'file',
 };

@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import _ from 'lodash';
+const fs = require('fs');
+const path = require('path');
+const lodash = require('lodash');
 
 const ENUM = {
   FILE: 'FILE',
@@ -10,17 +10,21 @@ const ENUM = {
   FUNCTION: 'FUNCTION',
 };
 
+interface IConfig {
+  [key: string]: keyof typeof ENUM;
+}
+
 /**
  * 获取当前目录的目录结构以及通配符
  * @param {object} config
  * @returns
  */
-export function getExpectedAndCommonPattern(config = {}) {
+function getExpectedAndCommonPattern(config: IConfig = {}) {
   const expected = [];
   let commonPattern = null;
 
   Object.entries(config).forEach(([key, value]) => {
-    if (_.isString(value) && value.toUpperCase() === ENUM.REGEXP) {
+    if (lodash.isString(value) && value.toUpperCase() === ENUM.REGEXP) {
       commonPattern = new RegExp(key);
     } else {
       expected.push(key);
@@ -40,7 +44,7 @@ export function getExpectedAndCommonPattern(config = {}) {
  * @param {string} rootDir 根目录
  * @returns
  */
-export function lint(dir, config, rootDir) {
+function lint(dir, config, rootDir) {
   const files = fs.readdirSync(dir);
   const { length } = files;
 
@@ -67,10 +71,17 @@ export function lint(dir, config, rootDir) {
       }
     }
 
-    if (_.isObject(configFile)) {
+    if (lodash.isObject(configFile)) {
       lint(path.resolve(dir, file), configFile, rootDir);
     }
   }
 
   return null;
 }
+
+module.exports = {
+  getExpectedAndCommonPattern,
+  lint,
+};
+
+export {};
