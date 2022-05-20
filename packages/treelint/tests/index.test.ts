@@ -1,4 +1,4 @@
-const { getExpectedAndCommonPattern } = require('../src/linter.ts');
+const { getExpectedAndCommonPattern } = require('../src/linter.js');
 
 const mockConfig = {
   src: {

@@ -2,7 +2,7 @@
 const chalk = require('chalk4');
 const { cosmiconfigSync } = require('cosmiconfig');
 const path = require('path');
-const meow = require('meow');
+const meow = require('meow9');
 const { lint } = require('./linter.js');
 const { flags, helperText, TREE_LINT } = require('./cli-config.js');
 
@@ -12,8 +12,6 @@ const cli = meow(helperText, {
   importMeta: true,
   flags,
 });
-
-const a = /$(1)|(2)$/;
 
 const getConfigFile = (project) => {
   let configFile = null;
