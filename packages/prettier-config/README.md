@@ -332,7 +332,7 @@ const func = (x) => x;
 - BAD
 
 ```html
-<div> name: ranwawa <span>age: 18 </span> </div>
+<div>name: ranwawa <span>age: 18 </span></div>
 ```
 
 - GOOD
