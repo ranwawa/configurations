@@ -8,7 +8,7 @@ module.exports = {
     'branchlint',
     'treelint',
     'commitlint-plugin',
-    'eslint-config-react',
+    'eslint-plugin',
     'git-cz-config',
     'prettier-config',
     'stylelint-config-scss',

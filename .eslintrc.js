@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@ranwawa/eslint-config-react'],
+  extends: ['plugin:@ranwawa/eslint-plugin/vue'],
   rules: {
     'import/no-import-module-exports': [
       'error',

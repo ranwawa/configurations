@@ -4,19 +4,12 @@ module.exports = {
   },
   extends: [
     'eslint-config-airbnb',
-    'eslint-config-airbnb-typescript',
-    'plugin:sonarjs/recommended',
-    'eslint-config-prettier',
+    'airbnb-typescript/base',
+    'plugin:eslint-plugin-prettier/recommended',
+    'plugin:eslint-plugin-sonarjs/recommended',
   ],
-  plugins: [
-    'eslint-plugin-prettier',
-    'eslint-plugin-react',
-    'eslint-plugin-react-hooks',
-    'eslint-plugin-sonarjs',
-  ],
+  plugins: ['eslint-plugin-sonarjs', 'eslint-plugin-prettier'],
   rules: {
-    'prettier/prettier': 'error',
-    'import/extensions': ['error', 'always'],
     'no-warning-comments': ['warn', { terms: ['TODO'], location: 'start' }],
     complexity: ['warn', { max: 10 }],
     'max-lines-per-function': [
@@ -41,11 +34,20 @@ module.exports = {
         next: ['const', 'let', 'var'],
       },
     ],
-    'sonarjs/cognitive-complexity': ['off'], // 关掉,用eslint默认的
+    'sonarjs/cognitive-complexity': ['off'], // 关掉,用eslint默认的圈复杂度
   },
   overrides: [
     {
-      files: ['test/**', '*.test.js', '*.test.ts'],
+      files: [
+        '**/__tests__/**/*.js',
+        '**/__tests__/**/*.ts',
+        '**/__tests__/**/*.jsx',
+        '**/__tests__/**/*.tsx',
+        '**/*.test.js',
+        '**/*.test.ts',
+        '**/*.test.jsx',
+        '**/*.test.tsx',
+      ],
       plugins: ['eslint-plugin-jest'],
       extends: ['plugin:eslint-plugin-jest/recommended'],
       rules: { 'jest/prefer-expect-assertions': 'off' },

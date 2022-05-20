@@ -13,6 +13,8 @@ const cli = meow(helperText, {
   flags,
 });
 
+const a = /$(1)|(2)$/;
+
 const getConfigFile = (project) => {
   let configFile = null;
   const explorer = cosmiconfigSync(TREE_LINT);

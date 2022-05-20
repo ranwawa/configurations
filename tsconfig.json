@@ -1,5 +1,5 @@
 {
   "files": ["./tsconfig.json", "./.eslintrc.js"],
-  "exclude": ["node_modules/", "packages/**/node_modules"],
-  "include": ["./*.js", "packages/**/*.js", "packages/**/*.ts"]
+  "exclude": ["node_modules/", "packages/**/node_modules", "dist/"],
+  "include": ["**/*.js", "**/*.ts", "**/*.jsx", "*.tsx"]
 }
