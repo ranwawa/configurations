@@ -38,16 +38,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: [
-        '**/__tests__/**/*.js',
-        '**/__tests__/**/*.ts',
-        '**/__tests__/**/*.jsx',
-        '**/__tests__/**/*.tsx',
-        '**/*.test.js',
-        '**/*.test.ts',
-        '**/*.test.jsx',
-        '**/*.test.tsx',
-      ],
+      files: ['**/__tests__/**/*.{j,t}s?(x)', '**/*.{test, spec}.{j,t}s?(x)'],
       plugins: ['eslint-plugin-jest'],
       extends: ['plugin:eslint-plugin-jest/recommended'],
       rules: { 'jest/prefer-expect-assertions': 'off' },
