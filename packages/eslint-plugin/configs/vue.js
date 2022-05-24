@@ -4,5 +4,5 @@ module.exports = {
     'plugin:eslint-plugin-vue/recommended', // Vue.js 2.x.
     require.resolve('./base'),
   ],
-  plugins: ['eslint-plugin-vue'],
+  plugins: ['eslint-plugin-vue'], // 依赖vue-eslint-parser
 };

@@ -1,10 +1,6 @@
 module.exports = {
-  parserOptions: {
-    project: './tsconfig.json',
-  },
   extends: [
-    'eslint-config-airbnb',
-    'airbnb-typescript/base',
+    'eslint-config-airbnb-base', // 不包含react
     'plugin:eslint-plugin-prettier/recommended',
     'plugin:eslint-plugin-sonarjs/recommended',
   ],
