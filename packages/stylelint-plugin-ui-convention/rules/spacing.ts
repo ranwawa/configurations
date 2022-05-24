@@ -34,7 +34,7 @@ const DEFAULT_OPTION = {
   's-xs': '8px',
   's-xxs': '4px',
 };
-const ruleName = `ranwawa/spacing-allowed-list`;
+const ruleName = 'ranwawa/spacing-allowed-list';
 
 const plugin = stylelint.createPlugin(
   ruleName,
