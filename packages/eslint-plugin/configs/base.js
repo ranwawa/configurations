@@ -1,6 +1,11 @@
 const { TESTS_FILES } = require('../utils');
 
 module.exports = {
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+  },
   extends: [
     'eslint-config-airbnb-base', // 不包含react
     'plugin:eslint-plugin-prettier/recommended',
