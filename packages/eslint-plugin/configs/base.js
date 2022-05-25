@@ -1,10 +1,18 @@
+const { TESTS_FILES } = require('../utils');
+
 module.exports = {
   extends: [
     'eslint-config-airbnb-base', // 不包含react
     'plugin:eslint-plugin-prettier/recommended',
     'plugin:eslint-plugin-sonarjs/recommended',
   ],
-  plugins: ['eslint-plugin-sonarjs', 'eslint-plugin-prettier'],
+  plugins: [
+    'eslint-plugin-sonarjs',
+    'eslint-plugin-jest',
+    'eslint-plugin-jest-dom',
+    'eslint-plugin-testing-library',
+    'eslint-plugin-prettier',
+  ],
   rules: {
     'no-warning-comments': ['warn', { terms: ['TODO'], location: 'start' }],
     complexity: ['warn', { max: 10 }],
@@ -34,9 +42,11 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/__tests__/**/*.{j,t}s?(x)', '**/*.{test, spec}.{j,t}s?(x)'],
-      plugins: ['eslint-plugin-jest'],
-      extends: ['plugin:eslint-plugin-jest/recommended'],
+      files: TESTS_FILES,
+      extends: [
+        'plugin:eslint-plugin-jest/recommended',
+        'plugin:eslint-plugin-jest-dom/recommended',
+      ],
       rules: { 'jest/prefer-expect-assertions': 'off' },
     },
   ],
