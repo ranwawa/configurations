@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['plugin:@ranwawa/eslint-plugin/vue-ts'],
+  extends: ['plugin:@ranwawa/eslint-plugin/base-ts'],
   rules: {
     'import/no-import-module-exports': [
       'error',

@@ -2,11 +2,17 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
-  extends: [
-    require.resolve('./base.js'),
-    'eslint-config-airbnb-typescript/base', // 不包含react相关规则
-  ],
+  extends: [require.resolve('./base.js')],
   rules: {
     '@typescript-eslint/comma-dangle': 'off', // 和prettier冲突了
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'eslint-config-airbnb-typescript/base', // 不包含react相关规则
+      ],
+    },
+  ],
 };

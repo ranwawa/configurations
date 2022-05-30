@@ -1,4 +1,4 @@
-const { TESTS_FILES } = require('../utils');
+const { TESTS_FILES } = require('../utils/index');
 
 module.exports = {
   env: {
@@ -8,8 +8,8 @@ module.exports = {
   },
   extends: [
     'eslint-config-airbnb-base', // 不包含react
-    'plugin:eslint-plugin-prettier/recommended',
     'plugin:eslint-plugin-sonarjs/recommended',
+    'plugin:eslint-plugin-prettier/recommended',
   ],
   plugins: [
     'eslint-plugin-sonarjs',

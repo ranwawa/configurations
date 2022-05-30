@@ -1,10 +1,13 @@
 {
   "name": "@ranwawa/eslint-plugin",
-  "version": "0.0.6",
+  "version": "0.1.1",
   "description": "",
   "keywords": [],
   "main": "index.js",
   "scripts": {},
+  "files": [
+    "*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ranwawa/configurations.git"

@@ -33,7 +33,7 @@ npm install --save-dev @ranwawa/prettier-config
 #### 1.1.2 初始化 prettier 配置文件
 
 ```bash
-echo "module.exports = {...require('@ranwawa/prettier-config')};" > .prettierrc.js
+echo '"@ranwawa/prettier-config"' > .prettierrc
 ```
 
 #### 1.1.3 验证 prettier 配置是否生效

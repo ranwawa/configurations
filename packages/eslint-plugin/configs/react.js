@@ -3,7 +3,7 @@ const { TESTS_FILES } = require('../utils');
 module.exports = {
   extends: [
     'eslint-config-airbnb', // 会继承eslint-config-airbnb-base
-    require.resolve('./base'),
+    require.resolve('./base.js'),
   ],
   plugins: ['eslint-plugin-react', 'eslint-plugin-react-hooks'],
   rules: {},
