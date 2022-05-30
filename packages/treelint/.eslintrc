@@ -1,0 +1,13 @@
+{
+  "root": true,
+  "extends": ["plugin:@ranwawa/eslint-plugin/base-ts"],
+  "rules": {
+    "import/no-import-module-exports": [
+      "error",
+      {
+        "exceptions": ["**/stylelint-plugin-ui-convention/**/*.ts"]
+      }
+    ],
+    "@typescript-eslint/no-var-requires": "off" // 当前是commonjs项目,不需要这个规则
+  }
+}
