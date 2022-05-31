@@ -1,6 +1,7 @@
 module.exports = {
   parserOptions: {
     project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
   },
   extends: [require.resolve('./base.js')],
   rules: {

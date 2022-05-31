@@ -1,10 +1,9 @@
 import stylelint = require('stylelint');
-
-const {
+import {
   processOption,
   revertOption,
   possibleOptions,
-} = require('../utils/index.js');
+} from '../utils/index.js';
 
 const { report, validateOptions, ruleMessages } = stylelint.utils;
 

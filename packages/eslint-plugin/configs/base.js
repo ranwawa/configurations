@@ -1,10 +1,10 @@
 const { TESTS_FILES } = require('../utils/index');
 
 module.exports = {
+  root: true,
   env: {
     browser: true,
     node: true,
-    jest: true,
   },
   extends: [
     'eslint-config-airbnb-base', // 不包含react
@@ -48,6 +48,9 @@ module.exports = {
   overrides: [
     {
       files: TESTS_FILES,
+      env: {
+        jest: true,
+      },
       extends: [
         'plugin:eslint-plugin-jest/recommended',
         'plugin:eslint-plugin-jest-dom/recommended',

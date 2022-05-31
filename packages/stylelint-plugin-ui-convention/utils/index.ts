@@ -5,7 +5,7 @@ import type { TOption, IPluginFactory } from '../types';
 
 const { report, validateOptions } = stylelint.utils;
 
-const processOption = (
+export const processOption = (
   primaryOption: TOption | true,
   postcssRoot: Root
 ): TOption => {
@@ -37,7 +37,7 @@ const processOption = (
   return processedOption;
 };
 
-const revertOption = (primaryOption: TOption): TOption => {
+export const revertOption = (primaryOption: TOption): TOption => {
   const option = {};
 
   Object.entries(primaryOption).forEach(([key, value]) => {
@@ -47,12 +47,12 @@ const revertOption = (primaryOption: TOption): TOption => {
   return option;
 };
 
-const isObject = (primaryOption: any): boolean =>
+export const isObject = (primaryOption: any): boolean =>
   typeof primaryOption === 'object' &&
   primaryOption !== null &&
   !Array.isArray(primaryOption);
 
-const possibleOptions =
+export const possibleOptions =
   (primaryOption, variableReg, postcssResult, defaultOption) => (value) => {
     if (value === true) {
       return true;
@@ -82,7 +82,7 @@ const possibleOptions =
     return true;
   };
 
-const createAllowedListPluginFactory = ({
+export const createAllowedListPluginFactory = ({
   ruleName,
   variableReg,
   defaultOption,
@@ -162,9 +162,3 @@ const createAllowedListPluginFactory = ({
         });
       }
   );
-
-module.exports = {
-  processOption,
-  revertOption,
-  createAllowedListPluginFactory,
-};
