@@ -1,3 +1,4 @@
+const path = require('path');
 const { TESTS_FILES } = require('../utils/index');
 
 module.exports = {
@@ -15,4 +16,11 @@ module.exports = {
       extends: ['plugin:eslint-plugin-testing-library/vue'],
     },
   ],
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [['@', path.resolve(__dirname, './src')]],
+      },
+    },
+  },
 };
