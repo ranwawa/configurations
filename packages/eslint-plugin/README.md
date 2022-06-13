@@ -11,27 +11,10 @@
 
 ### 1.1 安装依赖
 
-会自动安装相关依赖
-
-- `eslint`
-  - 格式化工具
-- `eslint-config-airbnb`
-  - airbnb 公司维护的 js 规则
-- `eslint-config-airbnb-typescript`
-  - airbnb 公司维护的 ts 规则
-- `eslint-config-prettier`
-  - prettier 维护的格式化规则
-- `eslint-plugin-prettier`
-  - prettier 维护的自动修复插件
-- `husky`
-  - git 钩子工具
-- `lint-staged`
-  - 针对未提交文件的 git 钩子工具
-
 #### 1.1.1 安装 eslint 配置文件
 
 ```bash
-npm install --save-dev @ranwawa/eslint-config-react
+npm install --save-dev @ranwawa/eslint-plugin
 ```
 
 #### 1.1.2 初始化 eslint 配置文件

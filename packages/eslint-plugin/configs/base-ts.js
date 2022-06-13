@@ -4,14 +4,12 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   extends: [require.resolve('./base.js')],
-  rules: {
-    '@typescript-eslint/comma-dangle': 'off', // 和prettier冲突了
-  },
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['**/*.ts', '**/*.tsx'],
       extends: [
         'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'eslint-config-airbnb-typescript/base', // 不包含react相关规则
       ],
       rules: {

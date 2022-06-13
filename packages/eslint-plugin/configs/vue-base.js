@@ -20,7 +20,9 @@ module.exports = {
     'import/resolver': {
       alias: {
         map: [['@', path.resolve(__dirname, './src')]],
+        extensions: ['.ts', '.tsx', '.vue'],
       },
+      node: { extensions: ['.mjs', '.js', '.json', '.tsx', '.ts', '.vue'] },
     },
   },
 };
