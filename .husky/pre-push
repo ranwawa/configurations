@@ -58,7 +58,7 @@ npx --no-install prettier --check --ignore-unknown --loglevel=warn $FILES
 
 # lint:script
 echo '------检测脚本代码...------'
-npx --no-install eslint $(getScriptFiles)
+# npx --no-install eslint $(getScriptFiles)
 
 # lint:style
 echo '------检测样式代码...------'

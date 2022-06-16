@@ -13,6 +13,7 @@ module.exports = {
         'eslint-config-airbnb-typescript/base', // 不包含react相关规则
       ],
       rules: {
+        '@typescript-eslint/indent': 'off',
         '@typescript-eslint/comma-dangle': 'off', // 和prettier冲突
       },
     },
