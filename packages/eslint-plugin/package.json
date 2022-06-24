@@ -31,9 +31,11 @@
     "@typescript-eslint/parser": "^5.25.0",
     "eslint-plugin-jest": "^26.2.2",
     "eslint-plugin-jest-dom": "^4.0.2",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-sonarjs": "^0.13.0",
     "eslint-plugin-testing-library": "^5.5.0",
-    "eslint-plugin-vue": "^9.0.1"
+    "eslint-plugin-vue": "^9.0.1",
+    "eslint-plugin-vuejs-accessibility": "^1.2.0"
   }
 }

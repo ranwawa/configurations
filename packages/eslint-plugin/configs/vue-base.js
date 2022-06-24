@@ -2,8 +2,16 @@ const path = require('path');
 const { TESTS_FILES } = require('../utils/index');
 
 module.exports = {
-  extends: [require.resolve('./base-ts.js')],
-  plugins: ['eslint-plugin-vue'], // 依赖vue-eslint-parser
+  extends: [
+    require.resolve('./base-ts.js'),
+    'plugin:eslint-plugin-jsx-a11y/recommended',
+    'plugin:eslint-plugin-vuejs-accessibility/recommended',
+  ],
+  plugins: [
+    'eslint-plugin-vue',
+    'eslint-plugin-jsx-a11y',
+    'eslint-plugin-vuejs-accessibility  ',
+  ], // 依赖vue-eslint-parser
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
