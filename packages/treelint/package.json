@@ -5,6 +5,9 @@
   "keywords": [],
   "type": "commonjs",
   "main": "./src/index.ts",
+  "engines": {
+    "npm": ">=7.0.0"
+  },
   "bin": "./dist/index.js",
   "scripts": {
     "compile": "tsc --watch",

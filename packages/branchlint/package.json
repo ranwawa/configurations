@@ -4,6 +4,9 @@
   "description": "lint tool for your branch name",
   "main": "./src/index.ts",
   "bin": "./bin/index.js",
+  "engines": {
+    "npm": ">=7.0.0"
+  },
   "type": "module",
   "scripts": {
     "compile": "tsc -watch",

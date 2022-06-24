@@ -3,6 +3,9 @@
   "version": "1.4.1",
   "description": "git commit message 配置规范",
   "main": "index.js",
+  "engines": {
+    "npm": ">=7.0.0"
+  },
   "dependencies": {
     "conventional-changelog-conventionalcommits": "^4.6.1"
   },

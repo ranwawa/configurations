@@ -3,6 +3,9 @@
   "version": "1.4.1",
   "description": "the configuration of prettier and examples.",
   "main": "index.js",
+  "engines": {
+    "npm": ">=7.0.0"
+  },
   "peerDependencies": {
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
